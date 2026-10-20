@@ -1,9 +1,60 @@
 [
-  {"id": "person", "question": "Is there a person in this image?", "extract": {"count": "integer"}, "cooldown": 30, "enabled": true},
-  {"id": "crowd", "question": "Are there more than 2 people in this image?", "extract": {"count": "integer"}, "cooldown": 60, "enabled": true},
-  {"id": "sitting", "question": "Is anyone sitting?", "extract": {}, "cooldown": 60, "enabled": true},
-  {"id": "phone", "question": "Is anyone holding or using a phone?", "extract": {}, "cooldown": 60, "enabled": false},
-  {"id": "red_shirt", "question": "Is anyone wearing a red shirt?", "extract": {}, "cooldown": 60, "enabled": false},
-  {"id": "package", "question": "Is there a box or package visible on the floor or near the door?", "extract": {}, "cooldown": 300, "enabled": false},
-  {"id": "activity", "question": "What is each person doing?", "extract": {"activity": "string"}, "cooldown": 120, "enabled": false}
+  {
+    "id": "person",
+    "question": "Is there a person in this image?",
+    "extract": {
+      "count": "integer"
+    },
+    "cooldown": 30,
+    "enabled": true,
+    "actions": [
+      "notify"
+    ]
+  },
+  {
+    "id": "crowd",
+    "question": "Are there more than 2 people in this image?",
+    "extract": {
+      "count": "integer"
+    },
+    "cooldown": 60,
+    "enabled": true
+  },
+  {
+    "id": "sitting",
+    "question": "Is anyone sitting?",
+    "extract": {},
+    "cooldown": 60,
+    "enabled": true
+  },
+  {
+    "id": "phone",
+    "question": "Is anyone holding or using a phone?",
+    "extract": {},
+    "cooldown": 60,
+    "enabled": false
+  },
+  {
+    "id": "red_shirt",
+    "question": "Is anyone wearing a red shirt?",
+    "extract": {},
+    "cooldown": 60,
+    "enabled": false
+  },
+  {
+    "id": "package",
+    "question": "Is there a box or package visible on the floor or near the door?",
+    "extract": {},
+    "cooldown": 300,
+    "enabled": false
+  },
+  {
+    "id": "activity",
+    "question": "What is each person doing?",
+    "extract": {
+      "activity": "string"
+    },
+    "cooldown": 120,
+    "enabled": false
+  }
 ]
