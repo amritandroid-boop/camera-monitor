@@ -32,7 +32,7 @@
     "question": "Is anyone holding or using a phone?",
     "extract": {},
     "cooldown": 60,
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "red_shirt",
@@ -55,6 +55,6 @@
       "activity": "string"
     },
     "cooldown": 120,
-    "enabled": false
+    "enabled": true
   }
 ]

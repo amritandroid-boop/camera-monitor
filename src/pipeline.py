@@ -1,7 +1,6 @@
 import argparse, json, os, sqlite3, time, uuid, cv2
 from vlm import encode, evaluate
-from actions import fire
-from actions import fire
+from action import fire
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--source", default="0", help="0 = webcam, or a video path / RTSP URL")
@@ -65,6 +64,8 @@ try:
                        (now, trace, rule["id"], int(trig), out.get("confidence"),
                         out.get("caption"), json.dumps(extra), lat, thumb))
             db.commit()
+            if trig:
+                print(f"    action: {fire(db, rule, out, trace, now)}")
             if trig:
                 print(f"    action: {fire(db, rule, out, trace, now)}")
             if trig:
